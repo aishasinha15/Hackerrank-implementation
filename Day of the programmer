@@ -1,0 +1,24 @@
+string r,y;
+    if(year>=1700&&year<=1917){
+        if(year%4==0){
+           y=to_string(year);
+           r="12.09."+y;
+        }
+        else{
+            y=to_string(year);
+          r="13.09."+y;
+        }
+    }
+    else if(year>=1919&&year<=2700){
+        if(year%400==0||(year%4==0 && year%100!=0)){
+           y=to_string(year);
+           r="12.09."+y;
+        }
+        else{
+            y=to_string(year);
+            r="13.09."+y;
+        }
+    }
+    else 
+       r="26.09.1918";
+    return r;
