@@ -1,0 +1,9 @@
+int actualbill=0;
+    for(int i=0;i<bill.size();i++){
+        if(i!=k)
+        actualbill=actualbill+bill[i]; 
+    }
+    if((actualbill)/2==b)
+    cout<<"Bon Appetit"<<endl;
+    else 
+    cout<<abs(b-(actualbill/2))<<endl;
