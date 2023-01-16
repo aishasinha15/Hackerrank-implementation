@@ -1,0 +1,15 @@
+ int max=0,l1,l2;
+    l1=keyboards.size();
+    l2=drives.size();
+    for(int i=0;i<l1;i++){
+        for(int j=0;j<l2;j++){
+            int sum=keyboards[i]+drives[j];
+            if(sum>max){
+                if(sum<=b)
+                max=sum;
+            }
+        }
+    }
+    if(max==0)
+    return -1;
+     return max;
