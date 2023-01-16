@@ -1,0 +1,9 @@
+ int maxh=0;
+      int l=word.length();
+      for(int i=0;i<l;i++){
+          int length=h[int(word[i]-97)];
+          if(length>maxh)
+          maxh=length;
+      }
+      int area=maxh*l;
+      return area;
