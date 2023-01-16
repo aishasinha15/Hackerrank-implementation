@@ -1,0 +1,11 @@
+ int maxh=0;
+      for(int i=0;i<height.size();i++){
+          if(height[i]>maxh)
+          maxh=height[i];
+      }
+      if(k<maxh){
+      int diff=abs(maxh-k);
+       return diff;
+      }
+      else 
+       return 0;
