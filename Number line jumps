@@ -1,0 +1,28 @@
+string kangaroo(int x1, int v1, int x2, int v2) {
+  string s;
+  bool flag=false;
+  if((x2>x1)&&(v2>v1))
+      s="NO";
+  else if((x2>x1)&&(v2==v1))
+      s="NO";
+  else{
+    long i=x1,j=x2;
+      //i+=v1;
+      //j+=v2;
+      while((i<=INT_MAX/2)&&(j<=INT_MAX/2)){
+          if(i==j){
+              s="YES";
+              break;
+              flag=true;
+          }
+          else{
+           s="NO";
+         } 
+         i+=v1;
+         j+=v2;    
+    }
+    if(flag)
+    s="NO";
+  }
+     return s;
+}
