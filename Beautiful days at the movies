@@ -1,0 +1,19 @@
+int rev(int n){
+    int result=0;
+    while(n!=0){
+        int rem =n%10;
+        result=result*10+rem;
+        n=n/10;
+    }
+    return result;
+}
+int beautifulDays(int i, int j, int k) {
+    int c=0;
+    for(int z=i;z<=j;z++){
+        int r=rev(z);
+        int a=(abs(r-z))%k;
+        if(a==0)
+        c++;
+    }
+    return c;
+}
