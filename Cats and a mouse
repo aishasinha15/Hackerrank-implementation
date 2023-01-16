@@ -1,0 +1,8 @@
+int ac=abs(x-z);
+        int bm=abs(y-z);
+        if(ac<bm)
+        return "Cat A";
+        else if(ac>bm)
+        return "Cat B";
+        else 
+        return "Mouse C";
