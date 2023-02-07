@@ -1,0 +1,20 @@
+int flatlandSpaceStations(int n, vector<int> c) {
+    vector<int> A{0,0};
+    int max=0;
+for(int i=0;i<n;i++){
+    int min=INT_MAX;
+    for(int j=0;j<c.size();j++){
+       int diff1=abs(i-c[j]);
+       if(diff1<min){
+       min=diff1;
+       A[0]=i;
+       A[1]=c[j];
+       }
+    }
+       int diff2=abs(A[0]-A[1]);
+       if(diff2>max)
+       max=diff2;
+    }
+
+ return max;
+}
