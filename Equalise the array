@@ -1,0 +1,38 @@
+
+int equalizeArray(vector<int> arr) {
+map<int,int> mp;
+for(int i=0;i<arr.size();i++){
+    mp[arr[i]]++;
+}
+
+int max=0;
+for(auto k:mp){
+    if(k.second>max)
+    max=k.second;
+}
+if(max==1)
+return arr.size()-1;
+
+for(auto i:mp){
+    cout<<i.first<<" -> "<<i.second<<endl;
+}
+int res=0;
+bool flag=true;
+for(auto j:mp){
+    if(j.second!=max)
+    res=res+j.second;
+}
+int countmax=0;
+for(auto i:mp){
+    if(i.second==max)
+    countmax++;
+}
+if(countmax>1){
+    int i=1;
+    while(i<=(countmax-1)){
+        res+=max;
+        i++;
+    }
+}
+return res;
+}
