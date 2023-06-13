@@ -1,0 +1,16 @@
+int birthday(vector<int> s, int d, int m) {
+   int c=0;
+    for(int i=0;i<s.size();i++){
+        int sum=0;
+        int p=i;
+        for(int j=0;j<m;j++){
+            if(p<s.size()){
+                sum+=s[p];
+                p++;
+            } 
+        }
+        if(sum==d)
+            c++;  
+    }
+    return c;
+}
